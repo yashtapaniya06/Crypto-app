@@ -13,7 +13,7 @@ function App() {
   // Fetch Data
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/crypto/savecryptoData")
+      .get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
       .then((res) => setCrypto(res.data))
       .catch((err) => console.log(err));
   }, []);
